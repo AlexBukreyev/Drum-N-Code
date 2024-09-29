@@ -4,6 +4,10 @@
 # For example:
 
 # {    
-#  "mail" : "test_mail@gmail.com", 
-#  "pwd" : "Kg123456}{"
+#  "email" : "test_mail@gmail.com", 
+#  "pwd" : "Kg123456}{",
+#  "incorrect_email_1": "@gmail.com",
+#  "incorrect_email_2": "test@@gmail.com",
+#  "incorrect_email_3": "test@",
+#  "incorrect_email_4": "test@gmail.com}{"
 # }

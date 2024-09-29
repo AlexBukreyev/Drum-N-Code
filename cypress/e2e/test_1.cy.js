@@ -16,7 +16,7 @@ describe('Booking testing ', () => {
 
     //Step 2      
     cy.get('#username')
-      .type(creeds.mail);
+      .type(creeds.email);
 
     //Step 3        
     cy.get('button > span')  
