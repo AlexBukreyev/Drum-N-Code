@@ -14,56 +14,21 @@ describe('Booking testing ', () => {
     cy.get('[data-testid="header-sign-up-button"] > .e4adce92df')
       .click()
 
-    //Step 2.1      
-    cy.get('#username')
-      .type(creeds.incorrect_email_1);
+    for ( let i = 0; i < creeds.incorrect_email.length; i++ ) {
+          
+      //Step 2     
+      cy.get('#username')
+        .clear()     
+        .type(creeds.incorrect_email[i]);
 
-    //Step 3     
-    cy.get('button > span')  
-      .contains('Continue with email')
-      .click({ multiple: true });
-   
-    cy.get('#username-note')  
-      .contains('Make sure the email address you entered is correct. ')     
-      
-    //Step 2.2     
-    cy.get('#username')
-      .clear() 
-      .type(creeds.incorrect_email_2);
-
-    //Step 3      
-    cy.get('button > span')  
-      .contains('Continue with email')
-      .click({ multiple: true });
-   
-    cy.get('#username-note')  
-      .contains('Make sure the email address you entered is correct. ')    
-      
-    //Step 2.3      
-    cy.get('#username')
-      .clear() 
-      .type(creeds.incorrect_email_3);
-
-    //Step 3       
-    cy.get('button > span')  
-      .contains('Continue with email')
-      .click({ multiple: true });
-
-    cy.get('#username-note')  
-      .contains('Make sure the email address you entered is correct. ')     
-      
-    //Step 2.4      
-    cy.get('#username')
-      .clear()     
-      .type(creeds.incorrect_email_4);
-
-    //Step 3        
-    cy.get('button > span')  
-      .contains('Continue with email')
-      .click({ multiple: true });
-    
-    cy.get('#username-note')  
-      .contains('Make sure the email address you entered is correct. ')        
+      //Step 3        
+      cy.get('button > span')  
+        .contains('Continue with email')
+        .click({ multiple: true });
+  
+      cy.get('#username-note')  
+        .contains('Make sure the email address you entered is correct. ')   
+    }
 
    })
 })
